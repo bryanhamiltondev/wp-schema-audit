@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Fixture: broken structured data</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MusicEvent",
+      "name": "Basement Rave",
+      "location": "The Loft"
+    },
+    {
+      "@type": "Organization",
+      "name": "The DJ Calendar"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": []
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicEvent",
+  "name": "Rooftop Takeover",
+  "startDate": "2026-11-14T22:00",
+  "location": { "@type": "Place", "name": "Skyline" },
+  "performer": { "@id": "#dj-missing" }
+}
+</script>
+<script type="application/ld+json">
+{ "broken": }
+</script>
+</head>
+<body><p>Block 1 misses required properties, block 2 references an @id that is
+never defined, and block 3 is unparsable. The engine must report all three.</p></body>
+</html>
