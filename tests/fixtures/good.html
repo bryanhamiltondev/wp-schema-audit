@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Fixture: clean structured data</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MusicEvent",
+      "@id": "#event-1",
+      "name": "Warehouse Sessions 042",
+      "startDate": "2026-10-31T21:00",
+      "location": { "@id": "#venue-1" },
+      "performer": { "@id": "#artist-1" }
+    },
+    {
+      "@type": "MusicGroup",
+      "@id": "#artist-1",
+      "name": "The Midnight Circuit"
+    },
+    {
+      "@type": "Place",
+      "@id": "#venue-1",
+      "name": "The Boiler Room"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is there an age limit?",
+          "acceptedAnswer": { "@type": "Answer", "text": "21 and over." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body><p>Every node in this fixture satisfies the required-property map, and
+every @id reference resolves against a node defined in the same graph.</p></body>
+</html>
