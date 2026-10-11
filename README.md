@@ -71,3 +71,5 @@ everything) or trigger-happy (failing everything) cannot slip through CI.
 The engine is the real production logic; the required-property map is a
 representative default. Site-specific rule sets and deployment wiring are not
 included.
+
+Built by Bryan Hamilton
